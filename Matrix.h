@@ -20,13 +20,13 @@ class Matrix {
         Matrix& operator=(const Matrix& other);
         Matrix& operator+=(const Matrix& other);
         Matrix& operator*=(const int& l);
-        Matrix operator*(const int& l) const;
+        Matrix operator*(const int& l) const; // multiply by int
         int* operator[](int x);
         const int* operator[](int x) const;
-        Matrix T() const;
+        Matrix T() const; // Transposition
 };
 
-const Matrix operator+(const Matrix& m1, const Matrix& m2);
-const Matrix operator*(const Matrix& m1, const Matrix& m2);
+const Matrix operator+(const Matrix& m1, const Matrix& m2); // add two matrices
+const Matrix operator*(const Matrix& m1, const Matrix& m2); // multiply two matrices
 std::ostream& operator<<(std::ostream& out, const Matrix& m);
 #endif
